@@ -4652,3 +4652,196 @@ FOREIGN KEY ("portfolio_id")
   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT  "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1 LIMIT $2[0m  [["portfolio_id", 10], ["LIMIT", 11]]
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 16:24:40 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 89ms (Views: 63.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:24:43 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 24.8ms)
+
+
+  
+SyntaxError (/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:25: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/portfolios/new.html.erb:25: syntax error, unexpected keyword_end
+app/views/portfolios/new.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/portfolios/new.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/portfolios/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:25:05 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (264.3ms)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x00007feed5cb8ba0>
+Did you mean?  label):
+    19:   <ul>
+    20:     <%= form.fields_for :technologies do |technology_form| %>
+    21:       <li>
+    22:         <%= technology_form.lable :name %>
+    23:         <%= technology_form.text_field :name %>
+    24:       </li>
+    25:     <% end %>
+  
+app/views/portfolios/new.html.erb:22:in `block (2 levels) in _app_views_portfolios_new_html_erb___699506113654778087_70331918373320'
+app/views/portfolios/new.html.erb:20:in `block in _app_views_portfolios_new_html_erb___699506113654778087_70331918373320'
+app/views/portfolios/new.html.erb:3:in `_app_views_portfolios_new_html_erb___699506113654778087_70331918373320'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:26:05 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (283.4ms)
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 13.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x00007f999bdd1058>
+Did you mean?  label):
+    19:   <ul>
+    20:     <%= form.fields_for :technologies do |technology_form| %>
+    21:       <li>
+    22:         <%= technology_form.lable :name %>
+    23:         <%= technology_form.text_field :name %>
+    24:       </li>
+    25:     <% end %>
+  
+app/views/portfolios/new.html.erb:22:in `block (2 levels) in _app_views_portfolios_new_html_erb___3636999254096946651_70148893426280'
+app/views/portfolios/new.html.erb:20:in `block in _app_views_portfolios_new_html_erb___3636999254096946651_70148893426280'
+app/views/portfolios/new.html.erb:3:in `_app_views_portfolios_new_html_erb___3636999254096946651_70148893426280'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:26:21 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 254ms (Views: 248.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:26:28 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2018-10-18 16:27:01 +0530
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3drUmR1Qs5ivJ0BkhkHiXqhFzmDWuMPsdMLHRKId9BdYQrnxY9Nl9Ph8pAZNGliWy+60+3vpBBqHaDa8wyHcJA==", "portfolio"=>{"title"=>"Portfolio title new", "subtitle"=>"ss", "body"=>"ss", "technologies_attributes"=>{"0"=>{"name"=>"Angular"}, "1"=>{"name"=>"Ionic"}, "2"=>{"name"=>"Rails"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mPortfolio Create (2.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title new"], ["subtitle", "ss"], ["body", "ss"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:57:01.809285"], ["updated_at", "2018-10-18 10:57:01.809285"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mTechnology Create (1.9ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Angular"], ["portfolio_id", 11], ["created_at", "2018-10-18 10:57:01.814645"], ["updated_at", "2018-10-18 10:57:01.814645"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mTechnology Create (0.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ionic"], ["portfolio_id", 11], ["created_at", "2018-10-18 10:57:01.818283"], ["updated_at", "2018-10-18 10:57:01.818283"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mTechnology Create (0.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails"], ["portfolio_id", 11], ["created_at", "2018-10-18 10:57:01.820772"], ["updated_at", "2018-10-18 10:57:01.820772"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:31
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 39ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 16:27:01 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 41ms (Views: 36.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2018-10-18 16:28:53 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 91ms (Views: 65.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/portfolio/11" for 127.0.0.1 at 2018-10-18 16:28:59 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (2.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 54ms (Views: 36.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/portfolio/11" for 127.0.0.1 at 2018-10-18 16:29:19 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/portfolio/11" for 127.0.0.1 at 2018-10-18 16:30:12 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 16:30:14 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 43.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:30:15 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 63ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:30:21 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 57ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
