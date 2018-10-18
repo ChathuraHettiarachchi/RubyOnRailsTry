@@ -2312,3 +2312,217 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 101ms (Views: 52.5ms | ActiveRecord: 7.3ms)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateFriendlyIdSlugs (20181018053010)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (119.2ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  ↳ db/migrate/20181018053010_create_friendly_id_slugs.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  ↳ db/migrate/20181018053010_create_friendly_id_slugs.rb:17
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  ↳ db/migrate/20181018053010_create_friendly_id_slugs.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  ↳ db/migrate/20181018053010_create_friendly_id_slugs.rb:19
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  ↳ db/migrate/20181018053010_create_friendly_id_slugs.rb:20
+  [1m[36mActiveRecord::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181018053010"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddSlugToBlogs (20181018053859)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (54.5ms)[0m  [1m[35mALTER TABLE "blogs" ADD "slug" character varying[0m
+  ↳ db/migrate/20181018053859_add_slug_to_blogs.rb:3
+  [1m[35m (110.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  ↳ db/migrate/20181018053859_add_slug_to_blogs.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181018053859"]]
+  ↳ bin/rails:9
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:13:41 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (4.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 443ms (Views: 389.1ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/blogs/2" for 127.0.0.1 at 2018-10-18 11:13:50 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "2"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:64
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:64
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 129ms (Views: 114.6ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 1 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  [1m[36mBlog Update (41.5ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-0"], ["updated_at", "2018-10-18 05:45:45.154296"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 2 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  [1m[36mBlog Update (1.2ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-1"], ["updated_at", "2018-10-18 05:45:45.205277"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 3 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  [1m[36mBlog Update (8.7ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-2"], ["updated_at", "2018-10-18 05:45:45.222240"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 4 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-3"], ["LIMIT", 1]]
+  [1m[36mBlog Update (1.7ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-3"], ["updated_at", "2018-10-18 05:45:45.240982"], ["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 5 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-4"], ["LIMIT", 1]]
+  [1m[36mBlog Update (0.9ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-4"], ["updated_at", "2018-10-18 05:45:45.266044"], ["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 6 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-5"], ["LIMIT", 1]]
+  [1m[36mBlog Update (1.7ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-5"], ["updated_at", "2018-10-18 05:45:45.274532"], ["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 7 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-6"], ["LIMIT", 1]]
+  [1m[36mBlog Update (2.7ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-6"], ["updated_at", "2018-10-18 05:45:45.296675"], ["id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 8 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-7"], ["LIMIT", 1]]
+  [1m[36mBlog Update (0.6ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-7"], ["updated_at", "2018-10-18 05:45:45.308522"], ["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 9 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-8"], ["LIMIT", 1]]
+  [1m[36mBlog Update (0.5ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-8"], ["updated_at", "2018-10-18 05:45:45.321445"], ["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" != 10 AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  [1m[36mBlog Update (1.0ms)[0m  [1m[33mUPDATE "blogs" SET "slug" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["slug", "my-blog-post-9"], ["updated_at", "2018-10-18 05:45:45.328385"], ["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:17:16 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:17:25 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 45ms (Views: 41.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:17:27 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:18:11 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:18:20 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:18:32 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 11:18:39 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2018-10-18 11:18:45 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (62.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:64
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 139ms (Views: 63.5ms | ActiveRecord: 62.9ms)
+
+
+Started GET "/blogs/my-blog-post-1" for 127.0.0.1 at 2018-10-18 11:18:48 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-1"}
+  [1m[36mBlog Load (9.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:64
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 76ms (Views: 54.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/blogs/my-blog-post-1/edit" for 127.0.0.1 at 2018-10-18 11:19:27 +0530
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-post-1"}
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:64
+  Rendering blogs/edit.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (49.6ms)
+  Rendered blogs/edit.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 126ms (Views: 117.2ms | ActiveRecord: 0.7ms)
+
+
