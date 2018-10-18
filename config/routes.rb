@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about' # can change name to any because it have path net to it
   get 'contact', to: 'pages#contact'
 
-  resources :blogs
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
 
   root to: "pages#home" # change the home page to page/home
 end
