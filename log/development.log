@@ -3456,3 +3456,79 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/query/lknfm" for 127.0.0.1 at 2018-10-18 13:58:30 +0530
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/query/lknfm"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 13:58:37 +0530
+Processing by BlogsController#index as HTML
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 41.8ms)
+
+
+  
+NoMethodError (undefined method `validate_presence_of' for #<Class:0x00007feacf23b588>
+Did you mean?  validates_presence_of
+               validates_absence_of):
+  
+app/models/blog.rb:10:in `<class:Blog>'
+app/models/blog.rb:4:in `<main>'
+app/controllers/blogs_controller.rb:10:in `index'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 13:58:55 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 327ms (Views: 305.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-10-18 13:59:10 +0530
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (16.9ms)
+  Rendered blogs/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 96ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2018-10-18 13:59:11 +0530
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dt2sF4Jg2EmLyH/UxItUl3K27aRn8dsHlPvoJyJeYR7ww1qTQAZV8EzU5Ed+kxu443ZVqtMKPFsPmIJaVidf3g==", "blog"=>{"title"=>"", "body"=>""}, "commit"=>"Create Blog"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:31
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.9ms)
+  Rendered blogs/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
