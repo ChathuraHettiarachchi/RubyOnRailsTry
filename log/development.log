@@ -3456,3 +3456,1392 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/query/lknfm" for 127.0.0.1 at 2018-10-18 13:58:30 +0530
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/query/lknfm"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 13:58:37 +0530
+Processing by BlogsController#index as HTML
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 41.8ms)
+
+
+  
+NoMethodError (undefined method `validate_presence_of' for #<Class:0x00007feacf23b588>
+Did you mean?  validates_presence_of
+               validates_absence_of):
+  
+app/models/blog.rb:10:in `<class:Blog>'
+app/models/blog.rb:4:in `<main>'
+app/controllers/blogs_controller.rb:10:in `index'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-18 13:58:55 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 327ms (Views: 305.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2018-10-18 13:59:10 +0530
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (16.9ms)
+  Rendered blogs/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 96ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2018-10-18 13:59:11 +0530
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dt2sF4Jg2EmLyH/UxItUl3K27aRn8dsHlPvoJyJeYR7ww1qTQAZV8EzU5Ed+kxu443ZVqtMKPFsPmIJaVidf3g==", "blog"=>{"title"=>"", "body"=>""}, "commit"=>"Create Blog"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/blogs_controller.rb:31
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/blogs_controller.rb:31
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.9ms)
+  Rendered blogs/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTopics (20181018084829)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (89.0ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181018084829_create_topics.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181018084829"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTopicReferenceToBlogs (20181018085255)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "blogs" ADD "topic_id" bigint[0m
+  ↳ db/migrate/20181018085255_add_topic_reference_to_blogs.rb:3
+  [1m[35m (41.7ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  ↳ db/migrate/20181018085255_add_topic_reference_to_blogs.rb:3
+  [1m[35m (10.0ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  ↳ db/migrate/20181018085255_add_topic_reference_to_blogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181018085255"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (1.4ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Ruby Programming"], ["created_at", "2018-10-18 08:57:00.319188"], ["updated_at", "2018-10-18 08:57:00.319188"]]
+  [1m[35m (38.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTopic Create (0.4ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Software Engineering"], ["created_at", "2018-10-18 08:57:11.517185"], ["updated_at", "2018-10-18 08:57:11.517185"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "cool-ruby"], ["LIMIT", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Create (47.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Cool ruby"], ["body", "akjnlknlkn"], ["created_at", "2018-10-18 09:00:56.220307"], ["updated_at", "2018-10-18 09:00:56.220307"], ["slug", "cool-ruby"], ["topic_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."topic_id" = $1 LIMIT $2[0m  [["topic_id", 1], ["LIMIT", 11]]
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE DATABASE "DevcampPortfolio_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "DevcampPortfolio_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (125.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (9.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  ↳ db/schema.rb:59
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:59
+  [1m[35m (6.3ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  ↳ db/schema.rb:65
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (14.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (27.0ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (41.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  ↳ db/schema.rb:59
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:59
+  [1m[35m (8.2ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  ↳ db/schema.rb:65
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181018085255)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181018055715),
+(20181018084829),
+(20181018053010),
+(20181018053859);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-10-18 09:08:04.550921"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (2.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-10-18 09:08:04.569565"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (0.9ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 0"], ["created_at", "2018-10-18 09:08:04.624572"], ["updated_at", "2018-10-18 09:08:04.624572"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (0.5ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 1"], ["created_at", "2018-10-18 09:08:04.668776"], ["updated_at", "2018-10-18 09:08:04.668776"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (38.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (0.6ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 2"], ["created_at", "2018-10-18 09:08:04.709496"], ["updated_at", "2018-10-18 09:08:04.709496"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (0.4ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 3"], ["created_at", "2018-10-18 09:08:04.712163"], ["updated_at", "2018-10-18 09:08:04.712163"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (1.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 0"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.831815"], ["updated_at", "2018-10-18 09:08:04.831815"], ["slug", "my-blog-post-0"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.6ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 1"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.881154"], ["updated_at", "2018-10-18 09:08:04.881154"], ["slug", "my-blog-post-1"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.8ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 2"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.887674"], ["updated_at", "2018-10-18 09:08:04.887674"], ["slug", "my-blog-post-2"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-3"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.7ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 3"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.894185"], ["updated_at", "2018-10-18 09:08:04.894185"], ["slug", "my-blog-post-3"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-4"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 4"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.900721"], ["updated_at", "2018-10-18 09:08:04.900721"], ["slug", "my-blog-post-4"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-5"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 5"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.907740"], ["updated_at", "2018-10-18 09:08:04.907740"], ["slug", "my-blog-post-5"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-6"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 6"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.914380"], ["updated_at", "2018-10-18 09:08:04.914380"], ["slug", "my-blog-post-6"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-7"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 7"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.920589"], ["updated_at", "2018-10-18 09:08:04.920589"], ["slug", "my-blog-post-7"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-8"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 8"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.926636"], ["updated_at", "2018-10-18 09:08:04.926636"], ["slug", "my-blog-post-8"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.7ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 9"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 09:08:04.933695"], ["updated_at", "2018-10-18 09:08:04.933695"], ["slug", "my-blog-post-9"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.9ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 0"], ["percent_utilized", 10], ["created_at", "2018-10-18 09:08:04.997783"], ["updated_at", "2018-10-18 09:08:04.997783"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 1"], ["percent_utilized", 20], ["created_at", "2018-10-18 09:08:05.035322"], ["updated_at", "2018-10-18 09:08:05.035322"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 2"], ["percent_utilized", 30], ["created_at", "2018-10-18 09:08:05.038853"], ["updated_at", "2018-10-18 09:08:05.038853"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.7ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 3"], ["percent_utilized", 40], ["created_at", "2018-10-18 09:08:05.042739"], ["updated_at", "2018-10-18 09:08:05.042739"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.4ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 4"], ["percent_utilized", 50], ["created_at", "2018-10-18 09:08:05.050814"], ["updated_at", "2018-10-18 09:08:05.050814"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.5ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 5"], ["percent_utilized", 60], ["created_at", "2018-10-18 09:08:05.053372"], ["updated_at", "2018-10-18 09:08:05.053372"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.4ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 6"], ["percent_utilized", 70], ["created_at", "2018-10-18 09:08:05.055789"], ["updated_at", "2018-10-18 09:08:05.055789"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Rails 7"], ["percent_utilized", 80], ["created_at", "2018-10-18 09:08:05.057926"], ["updated_at", "2018-10-18 09:08:05.057926"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.8ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 0"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.083744"], ["updated_at", "2018-10-18 09:08:05.083744"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 1"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.086704"], ["updated_at", "2018-10-18 09:08:05.086704"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 2"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.088923"], ["updated_at", "2018-10-18 09:08:05.088923"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 3"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.091891"], ["updated_at", "2018-10-18 09:08:05.091891"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 4"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.094288"], ["updated_at", "2018-10-18 09:08:05.094288"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.5ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 5"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.096506"], ["updated_at", "2018-10-18 09:08:05.096506"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.8ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 6"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.098724"], ["updated_at", "2018-10-18 09:08:05.098724"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 7"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.101682"], ["updated_at", "2018-10-18 09:08:05.101682"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mPortfolio Create (0.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 0"], ["subtitle", "Angular"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:08:05.104361"], ["updated_at", "2018-10-18 09:08:05.104361"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 14:58:55 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."subtitle" = $1[0m  [["subtitle", "Angular"]]
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 76ms (Views: 51.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 15:00:59 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (21.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."subtitle" = $1[0m  [["subtitle", "Runy on Rails"]]
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 91ms (Views: 53.5ms | ActiveRecord: 27.7ms)
+
+
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 15:01:56 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."subtitle" = $1[0m  [["subtitle", "Ruby on Rails"]]
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 98ms (Views: 64.7ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/angular-items" for 127.0.0.1 at 2018-10-18 15:05:14 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/angular-items"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/angular-items" for 127.0.0.1 at 2018-10-18 15:05:46 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#angular as HTML
+  Rendering portfolios/angular.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."subtitle" = $1[0m  [["subtitle", "Angular"]]
+  ↳ app/views/portfolios/angular.html.erb:7
+  Rendered portfolios/angular.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 373ms (Views: 334.1ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 15:14:45 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (8.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (70.6ms)
+Completed 200 OK in 232ms (Views: 111.6ms | ActiveRecord: 36.2ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 15:15:00 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 115ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2018-10-18 15:15:29 +0530
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"noZYtSlC+LhVk1PsZAWO/1W6VkTs+Te3O59iuq4mx72SDnq17PvQOV9ccyWSFjVIF4OwPREbAHZk9VuGM9jeZQ==", "portfolio"=>{"title"=>"ttbejbhebhwbejweb", "subtitle"=>"lm flm km ", "body"=>"kdjfkjdbowbej fj wfj kjfwkdjfbnwjdbfljwdbfj blf kbeljfblwj ebflwbelf jbwdfnwkmdfn jwflkwelfkn welf lwe flmw elfwelf nwlefn lwkneflkwnefwef we\r\n fw\r\n f\r\nwef\r\nwe\r\nf\r\nwef\r\nw\r\nb\r\nebe\r\nrgwebknefl weklvnenljwenfb\r\nqefb\r\nwen\r\nbe\r\nkbnewklbnle blkew\r\nb\r\n"}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:30
+  [1m[36mPortfolio Create (40.6ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "ttbejbhebhwbejweb"], ["subtitle", "lm flm km "], ["body", "kdjfkjdbowbej fj wfj kjfwkdjfbnwjdbfljwdbfj blf kbeljfblwj ebflwbelf jbwdfnwkmdfn jwflkwelfkn welf lwe flmw elfwelf nwlefn lwkneflkwnefwef we\r\n fw\r\n f\r\nwef\r\nwe\r\nf\r\nwef\r\nw\r\nb\r\nebe\r\nrgwebknefl weklvnenljwenfb\r\nqefb\r\nwen\r\nbe\r\nkbnewklbnle blkew\r\nb\r\n"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 09:45:29.279576"], ["updated_at", "2018-10-18 09:45:29.279576"]]
+  ↳ app/controllers/portfolios_controller.rb:30
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:30
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 52ms (ActiveRecord: 42.4ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 15:15:29 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 90ms (Views: 82.7ms | ActiveRecord: 1.2ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddBadgeToSkills (20181018095420)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (43.7ms)[0m  [1m[35mALTER TABLE "skills" ADD "badge" taxt[0m
+  ↳ db/migrate/20181018095420_add__badge_to_skills.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddBadgeToSkills (20181018095602)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "skills" ADD "badge" text[0m
+  ↳ db/migrate/20181018095602_add__badge_to_skills.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181018095602"]]
+  ↳ bin/rails:9
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 15:32:59 +0530
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 78ms (Views: 40.8ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2018-10-18 15:33:07 +0530
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ERtmv5knly0j2N1Q8fLut6dyUzBTiZ7pSZlggN/MrcQdk0S/XJ6/rCkX/ZkH4VUA5Uu1Sa5rqSgW81m8QjK0HA==", "portfolio"=>{"title"=>"test", "subtitle"=>",m m ", "body"=>"lfkwn;fk le;f lqef mqme;f mq mefn qmef mqnel f"}, "commit"=>"Create Portfolio"}
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:30
+  [1m[36mPortfolio Create (1.6ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test"], ["subtitle", ",m m "], ["body", "lfkwn;fk le;f lqef mqme;f mq mefn qmef mqnel f"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:03:07.304591"], ["updated_at", "2018-10-18 10:03:07.304591"]]
+  ↳ app/controllers/portfolios_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:30
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 11ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 15:33:07 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 67ms (Views: 60.9ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTechnologies (20181018100726)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (132.8ms)[0m  [1m[35mCREATE TABLE "technologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_cc5ab4a1c3"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+)[0m
+  ↳ db/migrate/20181018100726_create_technologies.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_technologies_on_portfolio_id" ON "technologies"  ("portfolio_id")[0m
+  ↳ db/migrate/20181018100726_create_technologies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181018100726"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(5396089536776303610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTechnology Create (5.1ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails"], ["portfolio_id", 11], ["created_at", "2018-10-18 10:09:58.885821"], ["updated_at", "2018-10-18 10:09:58.885821"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT  "technologies".* FROM "technologies" ORDER BY "technologies"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT  "technologies".* FROM "technologies" ORDER BY "technologies"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT  "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1 LIMIT $2[0m  [["portfolio_id", 11], ["LIMIT", 11]]
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE DATABASE "DevcampPortfolio_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "DevcampPortfolio_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (20.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (24.9ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "badge" text)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (8.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "technologies" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "technologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX  "index_technologies_on_portfolio_id" ON "technologies"  ("portfolio_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  ↳ db/schema.rb:68
+  [1m[35m (22.9ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:68
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  ↳ db/schema.rb:74
+  [1m[35m (6.0ms)[0m  [1m[35mALTER TABLE "technologies" ADD CONSTRAINT "fk_rails_cc5ab4a1c3"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  ↳ db/schema.rb:75
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (2.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (7.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "blogs" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (25.6ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "slug" character varying, "status" integer DEFAULT 0, "topic_id" bigint)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_blogs_on_slug" ON "blogs"  ("slug")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_topic_id" ON "blogs"  ("topic_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "friendly_id_slugs" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" serial NOT NULL PRIMARY KEY, "slug" character varying NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" character varying(50), "scope" character varying, "created_at" timestamp)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs"  ("slug", "sluggable_type", "scope")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs"  ("slug", "sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs"  ("sluggable_id")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs"  ("sluggable_type")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "portfolios" CASCADE[0m
+  ↳ db/schema.rb:42
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "portfolios" ("id" bigserial primary key, "title" character varying, "subtitle" character varying, "body" text, "main_image" text, "thumb_image" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (6.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "skills" CASCADE[0m
+  ↳ db/schema.rb:52
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "skills" ("id" bigserial primary key, "title" character varying, "percent_utilized" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "badge" text)[0m
+  ↳ db/schema.rb:52
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "technologies" CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "technologies" ("id" bigserial primary key, "name" character varying, "portfolio_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:60
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE  INDEX  "index_technologies_on_portfolio_id" ON "technologies"  ("portfolio_id")[0m
+  ↳ db/schema.rb:60
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "topics" CASCADE[0m
+  ↳ db/schema.rb:68
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "topics" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:68
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "blogs" ADD CONSTRAINT "fk_rails_7f5637ea0d"
+FOREIGN KEY ("topic_id")
+  REFERENCES "topics" ("id")
+[0m
+  ↳ db/schema.rb:74
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "technologies" ADD CONSTRAINT "fk_rails_cc5ab4a1c3"
+FOREIGN KEY ("portfolio_id")
+  REFERENCES "portfolios" ("id")
+[0m
+  ↳ db/schema.rb:75
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181018100726)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181018095602);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (1.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-10-18 10:20:27.271196"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-10-18 10:20:27.282419"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (1.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 0"], ["created_at", "2018-10-18 10:20:27.328052"], ["updated_at", "2018-10-18 10:20:27.328052"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (0.6ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 1"], ["created_at", "2018-10-18 10:20:27.372681"], ["updated_at", "2018-10-18 10:20:27.372681"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (0.4ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 2"], ["created_at", "2018-10-18 10:20:27.377067"], ["updated_at", "2018-10-18 10:20:27.377067"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Create (0.4ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Topic 3"], ["created_at", "2018-10-18 10:20:27.379742"], ["updated_at", "2018-10-18 10:20:27.379742"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTopic Load (0.7ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (1.2ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 0"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.513071"], ["updated_at", "2018-10-18 10:20:27.513071"], ["slug", "my-blog-post-0"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 1"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.562288"], ["updated_at", "2018-10-18 10:20:27.562288"], ["slug", "my-blog-post-1"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 2"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.570525"], ["updated_at", "2018-10-18 10:20:27.570525"], ["slug", "my-blog-post-2"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-3"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 3"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.577355"], ["updated_at", "2018-10-18 10:20:27.577355"], ["slug", "my-blog-post-3"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-4"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 4"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.583333"], ["updated_at", "2018-10-18 10:20:27.583333"], ["slug", "my-blog-post-4"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-5"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 5"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.589364"], ["updated_at", "2018-10-18 10:20:27.589364"], ["slug", "my-blog-post-5"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-6"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 6"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.598410"], ["updated_at", "2018-10-18 10:20:27.598410"], ["slug", "my-blog-post-6"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-7"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 7"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.610917"], ["updated_at", "2018-10-18 10:20:27.610917"], ["slug", "my-blog-post-7"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-8"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.3ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 8"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.616546"], ["updated_at", "2018-10-18 10:20:27.616546"], ["slug", "my-blog-post-8"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.4ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mBlog Create (0.7ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "topic_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "My Blog Post 9"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["created_at", "2018-10-18 10:20:27.623428"], ["updated_at", "2018-10-18 10:20:27.623428"], ["slug", "my-blog-post-9"], ["topic_id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.8ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 0"], ["percent_utilized", 10], ["created_at", "2018-10-18 10:20:27.639189"], ["updated_at", "2018-10-18 10:20:27.639189"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 1"], ["percent_utilized", 20], ["created_at", "2018-10-18 10:20:27.682296"], ["updated_at", "2018-10-18 10:20:27.682296"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.6ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 2"], ["percent_utilized", 30], ["created_at", "2018-10-18 10:20:27.685206"], ["updated_at", "2018-10-18 10:20:27.685206"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 3"], ["percent_utilized", 40], ["created_at", "2018-10-18 10:20:27.688048"], ["updated_at", "2018-10-18 10:20:27.688048"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 4"], ["percent_utilized", 50], ["created_at", "2018-10-18 10:20:27.690342"], ["updated_at", "2018-10-18 10:20:27.690342"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.4ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 5"], ["percent_utilized", 60], ["created_at", "2018-10-18 10:20:27.692436"], ["updated_at", "2018-10-18 10:20:27.692436"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 6"], ["percent_utilized", 70], ["created_at", "2018-10-18 10:20:27.694586"], ["updated_at", "2018-10-18 10:20:27.694586"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mSkill Create (0.3ms)[0m  [1m[32mINSERT INTO "skills" ("title", "percent_utilized", "created_at", "updated_at", "badge") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rails 7"], ["percent_utilized", 80], ["created_at", "2018-10-18 10:20:27.696788"], ["updated_at", "2018-10-18 10:20:27.696788"], ["badge", "http://placehold.it/250x250"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (3.1ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 0"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.715137"], ["updated_at", "2018-10-18 10:20:27.715137"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (1.5ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 1"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.763109"], ["updated_at", "2018-10-18 10:20:27.763109"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 2"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.768120"], ["updated_at", "2018-10-18 10:20:27.768120"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 3"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.770531"], ["updated_at", "2018-10-18 10:20:27.770531"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 4"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.773059"], ["updated_at", "2018-10-18 10:20:27.773059"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 5"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.775360"], ["updated_at", "2018-10-18 10:20:27.775360"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 6"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.777897"], ["updated_at", "2018-10-18 10:20:27.777897"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 7"], ["subtitle", "Ruby on Rails"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.780446"], ["updated_at", "2018-10-18 10:20:27.780446"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mPortfolio Create (0.4ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title 0"], ["subtitle", "Angular"], ["body", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in\n    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa\n    qui officia deserunt mollit anim id est laborum."], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:20:27.782810"], ["updated_at", "2018-10-18 10:20:27.782810"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mTechnology Create (1.1ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 0"], ["portfolio_id", 9], ["created_at", "2018-10-18 10:20:27.811523"], ["updated_at", "2018-10-18 10:20:27.811523"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mTechnology Create (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 1"], ["portfolio_id", 9], ["created_at", "2018-10-18 10:20:27.822253"], ["updated_at", "2018-10-18 10:20:27.822253"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:69
+  [1m[36mTechnology Create (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Technology 2"], ["portfolio_id", 9], ["created_at", "2018-10-18 10:20:27.826242"], ["updated_at", "2018-10-18 10:20:27.826242"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (40.6ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Web app"], ["subtitle", "asdasd"], ["body", "lskdnalksndlkans"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:43:16.025292"], ["updated_at", "2018-10-18 10:43:16.025292"]]
+  [1m[36mTechnology Create (42.1ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.095357"], ["updated_at", "2018-10-18 10:43:16.095357"]]
+  [1m[36mTechnology Create (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.139345"], ["updated_at", "2018-10-18 10:43:16.139345"]]
+  [1m[36mTechnology Create (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Angular"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.141159"], ["updated_at", "2018-10-18 10:43:16.141159"]]
+  [1m[36mTechnology Create (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ionic"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.142954"], ["updated_at", "2018-10-18 10:43:16.142954"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT  "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1 LIMIT $2[0m  [["portfolio_id", 10], ["LIMIT", 11]]
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 16:24:40 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 89ms (Views: 63.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:24:43 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 24.8ms)
+
+
+  
+SyntaxError (/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:25: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/portfolios/new.html.erb:25: syntax error, unexpected keyword_end
+app/views/portfolios/new.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/portfolios/new.html.erb:33: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/portfolios/new.html.erb:35: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:25:05 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (264.3ms)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x00007feed5cb8ba0>
+Did you mean?  label):
+    19:   <ul>
+    20:     <%= form.fields_for :technologies do |technology_form| %>
+    21:       <li>
+    22:         <%= technology_form.lable :name %>
+    23:         <%= technology_form.text_field :name %>
+    24:       </li>
+    25:     <% end %>
+  
+app/views/portfolios/new.html.erb:22:in `block (2 levels) in _app_views_portfolios_new_html_erb___699506113654778087_70331918373320'
+app/views/portfolios/new.html.erb:20:in `block in _app_views_portfolios_new_html_erb___699506113654778087_70331918373320'
+app/views/portfolios/new.html.erb:3:in `_app_views_portfolios_new_html_erb___699506113654778087_70331918373320'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:26:05 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (283.4ms)
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 13.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `lable' for #<ActionView::Helpers::FormBuilder:0x00007f999bdd1058>
+Did you mean?  label):
+    19:   <ul>
+    20:     <%= form.fields_for :technologies do |technology_form| %>
+    21:       <li>
+    22:         <%= technology_form.lable :name %>
+    23:         <%= technology_form.text_field :name %>
+    24:       </li>
+    25:     <% end %>
+  
+app/views/portfolios/new.html.erb:22:in `block (2 levels) in _app_views_portfolios_new_html_erb___3636999254096946651_70148893426280'
+app/views/portfolios/new.html.erb:20:in `block in _app_views_portfolios_new_html_erb___3636999254096946651_70148893426280'
+app/views/portfolios/new.html.erb:3:in `_app_views_portfolios_new_html_erb___3636999254096946651_70148893426280'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:26:21 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 254ms (Views: 248.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:26:28 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 62ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2018-10-18 16:27:01 +0530
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3drUmR1Qs5ivJ0BkhkHiXqhFzmDWuMPsdMLHRKId9BdYQrnxY9Nl9Ph8pAZNGliWy+60+3vpBBqHaDa8wyHcJA==", "portfolio"=>{"title"=>"Portfolio title new", "subtitle"=>"ss", "body"=>"ss", "technologies_attributes"=>{"0"=>{"name"=>"Angular"}, "1"=>{"name"=>"Ionic"}, "2"=>{"name"=>"Rails"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mPortfolio Create (2.3ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Portfolio title new"], ["subtitle", "ss"], ["body", "ss"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:57:01.809285"], ["updated_at", "2018-10-18 10:57:01.809285"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mTechnology Create (1.9ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Angular"], ["portfolio_id", 11], ["created_at", "2018-10-18 10:57:01.814645"], ["updated_at", "2018-10-18 10:57:01.814645"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mTechnology Create (0.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ionic"], ["portfolio_id", 11], ["created_at", "2018-10-18 10:57:01.818283"], ["updated_at", "2018-10-18 10:57:01.818283"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[36mTechnology Create (0.8ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails"], ["portfolio_id", 11], ["created_at", "2018-10-18 10:57:01.820772"], ["updated_at", "2018-10-18 10:57:01.820772"]]
+  ↳ app/controllers/portfolios_controller.rb:31
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:31
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 39ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 16:27:01 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 41ms (Views: 36.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2018-10-18 16:28:53 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (1.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 91ms (Views: 65.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/portfolio/11" for 127.0.0.1 at 2018-10-18 16:28:59 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (2.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 54ms (Views: 36.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/portfolio/11" for 127.0.0.1 at 2018-10-18 16:29:19 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/portfolio/11" for 127.0.0.1 at 2018-10-18 16:30:12 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-18 16:30:14 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 43.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:30:15 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 63ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-18 16:30:21 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 57ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
