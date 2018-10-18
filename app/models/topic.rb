@@ -3,6 +3,5 @@
 # Topic model
 class Topic < ApplicationRecord
   validates :title, presence: true
-
-  has_many :blogs
+  has_many :blogs, dependent: :destroy
 end

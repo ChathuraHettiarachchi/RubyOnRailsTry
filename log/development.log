@@ -4643,3 +4643,12 @@ FOREIGN KEY ("portfolio_id")
   ↳ db/seeds.rb:69
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:69
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPortfolio Create (40.6ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Web app"], ["subtitle", "asdasd"], ["body", "lskdnalksndlkans"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-18 10:43:16.025292"], ["updated_at", "2018-10-18 10:43:16.025292"]]
+  [1m[36mTechnology Create (42.1ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.095357"], ["updated_at", "2018-10-18 10:43:16.095357"]]
+  [1m[36mTechnology Create (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.139345"], ["updated_at", "2018-10-18 10:43:16.139345"]]
+  [1m[36mTechnology Create (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Angular"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.141159"], ["updated_at", "2018-10-18 10:43:16.141159"]]
+  [1m[36mTechnology Create (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ionic"], ["portfolio_id", 10], ["created_at", "2018-10-18 10:43:16.142954"], ["updated_at", "2018-10-18 10:43:16.142954"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT  "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1 LIMIT $2[0m  [["portfolio_id", 10], ["LIMIT", 11]]
