@@ -4845,3 +4845,14 @@ Processing by PortfoliosController#new as HTML
 Completed 200 OK in 57ms (Views: 51.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2018-10-19 10:00:54 +0530
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (49.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (122.3ms)
+Completed 200 OK in 569ms (Views: 418.1ms | ActiveRecord: 105.9ms)
+
+
