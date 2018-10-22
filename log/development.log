@@ -6702,3 +6702,35 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 52ms (Views: 47.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2018-10-22 10:52:30 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (12.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (68.9ms)
+Completed 200 OK in 160ms (Views: 103.3ms | ActiveRecord: 44.1ms)
+
+
+Started GET "/portfolio/1?q=Twitter" for 127.0.0.1 at 2018-10-22 10:52:41 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"q"=>"Twitter", "id"=>"1"}
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:14
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:11
+  Rendered portfolios/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 72ms (Views: 40.2ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-22 10:52:46 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:6
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:9
+  Rendered pages/home.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 69ms (Views: 55.7ms | ActiveRecord: 7.4ms)
+
+
