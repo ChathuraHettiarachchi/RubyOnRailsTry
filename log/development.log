@@ -7956,3 +7956,182 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 339ms (Views: 324.2ms | ActiveRecord: 11.4ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:32:35 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (23.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 86ms (Views: 65.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:32:35 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.7ms)
+  Rendered blogs/index.html.erb within layouts/blog (14.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 70ms (Views: 61.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:34:11 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (240.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (247.8ms)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `distence_of_time_in_words' for #<#<Class:0x00007fd505ed6700>:0x00007fd505c67b90>
+Did you mean?  distance_of_time_in_words):
+    1: <tr>
+    2:   <td><%= blog.title %></td>
+    3:   <td><%= distence_of_time_in_words(blog.created_at, Time.now) %></td>
+    4:   <td><%= blog.body %></td>
+    5:   <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+    6:   <td><%= link_to 'Show', blog %></td>
+  
+app/views/blogs/_blog.html.erb:3:in `_app_views_blogs__blog_html_erb___952466781650830035_70276451020600'
+app/views/blogs/index.html.erb:16:in `_app_views_blogs_index_html_erb___1293023901270198957_70276450855420'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:34:25 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (14.7ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 69.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:35:01 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (6.8ms)
+  Rendered blogs/index.html.erb within layouts/blog (12.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 54ms (Views: 46.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:35:13 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (8.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:37:27 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (6.5ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+Completed 200 OK in 83ms (Views: 72.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:37:27 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered shared/_nav.html.erb (1.6ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+Completed 200 OK in 83ms (Views: 74.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:37:40 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:38:33 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (24.0ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+Completed 200 OK in 78ms (Views: 72.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:39:51 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (171.7ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `tage' for #<#<Class:0x00007fd505bdea98>:0x00007fd5072d1020>
+Did you mean?  tag):
+    2: 
+    3: <p><%= number_to_phone "+94773373739" %></p>
+    4: <p><%= number_to_currency "150" %></p
+    5:   <p><%= number_to_perce tage "80.4" %></p
+  
+app/views/pages/contact.html.erb:5:in `_app_views_pages_contact_html_erb__3224651263660376791_70276462580680'
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:40:01 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (231.7ms)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `number_to_percetage' for #<#<Class:0x00007fd505bdea98>:0x00007fd507425660>
+Did you mean?  number_to_percentage):
+    2: 
+    3: <p><%= number_to_phone "+94773373739" %></p>
+    4: <p><%= number_to_currency "150" %></p
+    5:   <p><%= number_to_percetage "80.4" %></p
+  
+app/views/pages/contact.html.erb:5:in `_app_views_pages_contact_html_erb__3224651263660376791_70276463276060'
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:40:12 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (18.5ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+Completed 200 OK in 93ms (Views: 87.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 13:41:11 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (2.0ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+Completed 200 OK in 54ms (Views: 47.0ms | ActiveRecord: 2.4ms)
+
+
