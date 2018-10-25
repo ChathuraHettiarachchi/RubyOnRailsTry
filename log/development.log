@@ -7570,3 +7570,51 @@ Processing by PortfoliosController#edit as HTML
 Completed 200 OK in 95ms (Views: 78.4ms | ActiveRecord: 5.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:41:56 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (111.3ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+Completed 200 OK in 202ms (Views: 112.8ms | ActiveRecord: 69.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:49:42 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (4.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (45.9ms)
+  Rendered shared/_nav.html.erb (1.6ms)
+Completed 200 OK in 123ms (Views: 75.4ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:53:29 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (55.6ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 105ms (Views: 70.3ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:54:09 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (2.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (84.2ms)
+  Rendered shared/_nav.html.erb (1.6ms)
+Completed 200 OK in 171ms (Views: 107.4ms | ActiveRecord: 45.3ms)
+
+
