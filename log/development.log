@@ -7210,3 +7210,363 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 74ms (Views: 68.6ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:23:34 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (18.9ms)
+  Rendered shared/_nav.html.erb (3.3ms)
+Completed 200 OK in 125ms (Views: 112.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:23:44 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (5.7ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:23:45 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (6.1ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:23:49 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (8.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 52.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:23:49 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (7.6ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:23:50 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (9.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (20.3ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 72.1ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:23:50 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+  Rendered shared/_nav.html.erb (1.4ms)
+Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:24:02 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (64.0ms)
+  Rendered shared/_nav.html.erb (3.1ms)
+Completed 200 OK in 380ms (Views: 339.9ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:24:05 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (16.6ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 76ms (Views: 64.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:24:05 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (4.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 41.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:24:09 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (31.5ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 141ms (Views: 68.9ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:24:09 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (10.1ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 99ms (Views: 75.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:26:32 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (10.9ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 125ms (Views: 118.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:26:46 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (11.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (21.8ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 110ms (Views: 91.6ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:26:46 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (6.2ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 48.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:26:48 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (1.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (19.1ms)
+  Rendered shared/_nav.html.erb (1.2ms)
+Completed 200 OK in 99ms (Views: 87.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:26:48 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (6.2ms)
+  Rendered shared/_nav.html.erb (1.2ms)
+Completed 200 OK in 55ms (Views: 45.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:31:11 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (6.1ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:31:12 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (3.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (14.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 67ms (Views: 55.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:31:12 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (5.4ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-25 11:31:14 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/portfolio
+  Rendered portfolios/new.html.erb within layouts/portfolio (11.1ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 35.7ms)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views"
+  * "/Users/Choota/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views"
+):
+    1: <h1>Create new Portfolio Item</h1>
+    2: 
+    3: <%= render 'form', portfolio_item: @portfolio_item %>
+  
+app/views/portfolios/new.html.erb:3:in `_app_views_portfolios_new_html_erb__2876043926244259255_70246138291900'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-25 11:32:28 +0530
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/portfolio
+  Rendered portfolios/new.html.erb within layouts/portfolio (16.8ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 16.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views"
+  * "/Users/Choota/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views"
+):
+    1: <h1>Create new Portfolio Item</h1>
+    2: 
+    3: <%= render 'form', portfolio_item: @portfolio_item %>
+  
+app/views/portfolios/new.html.erb:3:in `_app_views_portfolios_new_html_erb__2839648609287709776_70291847766260'
+Started GET "/portfolios/new" for 127.0.0.1 at 2018-10-25 11:32:51 +0530
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/portfolio
+  Rendered portfolios/_form.html.erb (20.2ms)
+  Rendered portfolios/new.html.erb within layouts/portfolio (24.2ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 329ms (Views: 322.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for 127.0.0.1 at 2018-10-25 11:33:16 +0530
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"drDNt/cShcDGVAGKxJKSOJS9NP9t3upbaIKQWFBYblGRpMyXgo2o/yHOjfb5jCyygpnTm93B3F7PPpQHIgqGmg==", "portfolio"=>{"title"=>"This is a test", "subtitle"=>"kdnflkwnflnfnf1l", "body"=>"l kbkjkjb", "technologies_attributes"=>{"0"=>{"name"=>"12"}, "1"=>{"name"=>"123"}, "2"=>{"name"=>"1234"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (41.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/portfolios_controller.rb:33
+  [1m[36mPortfolio Create (9.7ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "This is a test"], ["subtitle", "kdnflkwnflnfnf1l"], ["body", "l kbkjkjb"], ["main_image", "http://placehold.it/600x400"], ["thumb_image", "http://placehold.it/350x200"], ["created_at", "2018-10-25 06:03:16.800458"], ["updated_at", "2018-10-25 06:03:16.800458"]]
+  ↳ app/controllers/portfolios_controller.rb:33
+  [1m[36mTechnology Create (8.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "12"], ["portfolio_id", 10], ["created_at", "2018-10-25 06:03:16.829483"], ["updated_at", "2018-10-25 06:03:16.829483"]]
+  ↳ app/controllers/portfolios_controller.rb:33
+  [1m[36mTechnology Create (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "123"], ["portfolio_id", 10], ["created_at", "2018-10-25 06:03:16.839470"], ["updated_at", "2018-10-25 06:03:16.839470"]]
+  ↳ app/controllers/portfolios_controller.rb:33
+  [1m[36mTechnology Create (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "1234"], ["portfolio_id", 10], ["created_at", "2018-10-25 06:03:16.841374"], ["updated_at", "2018-10-25 06:03:16.841374"]]
+  ↳ app/controllers/portfolios_controller.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/portfolios_controller.rb:33
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 96ms (ActiveRecord: 62.6ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:33:16 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (5.4ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2018-10-25 11:33:20 +0530
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:25
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/_form.html.erb:18
+  Rendered portfolios/_form.html.erb (7.2ms)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (14.6ms)
+  Rendered shared/_nav.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 45.1ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2018-10-25 11:34:45 +0530
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:25
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (3.6ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/_form.html.erb:18
+  Rendered portfolios/_form.html.erb (24.5ms)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (31.8ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 303ms (Views: 157.7ms | ActiveRecord: 50.8ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:35:15 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (21.8ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 80ms (Views: 62.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/portfolios/1/edit" for 127.0.0.1 at 2018-10-25 11:35:16 +0530
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:25
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (0.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/_form.html.erb:18
+  Rendered portfolios/_form.html.erb (30.4ms)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (36.4ms)
+  Rendered shared/_nav.html.erb (0.8ms)
+Completed 200 OK in 95ms (Views: 81.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/portfolios/9/edit" for 127.0.0.1 at 2018-10-25 11:35:20 +0530
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:25
+  Rendering portfolios/edit.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (0.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 9]]
+  ↳ app/views/portfolios/_form.html.erb:18
+  Rendered portfolios/_form.html.erb (33.2ms)
+  Rendered portfolios/edit.html.erb within layouts/portfolio (37.7ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 95ms (Views: 78.4ms | ActiveRecord: 5.5ms)
+
+
