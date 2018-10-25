@@ -6966,3 +6966,213 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 82ms (Views: 72.7ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 10:57:19 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 146ms (Views: 134.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 10:58:06 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (25.1ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 12.5ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+     7: 
+     8:     <meta name="keywords" content="<%= @seo_keywords %>">
+     9: 
+    10:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/blog.html.erb:10:in `_app_views_layouts_blog_html_erb___862762669249992492_70257389169100'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 10:58:46 +0530
+  [1m[35m (40.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (31.4ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 8.8ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+     7: 
+     8:     <meta name="keywords" content="<%= @seo_keywords %>">
+     9: 
+    10:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/blog.html.erb:10:in `_app_views_layouts_blog_html_erb__3159035349027059828_70322746497620'
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:59:48 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 136ms (Views: 105.1ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 10:59:50 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (42.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/application (73.4ms)
+Completed 200 OK in 159ms (Views: 72.1ms | ActiveRecord: 49.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 10:59:52 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (7.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (20.9ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 7.6ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+     7: 
+     8:     <meta name="keywords" content="<%= @seo_keywords %>">
+     9: 
+    10:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/blog.html.erb:10:in `_app_views_layouts_blog_html_erb__3159035349027059828_70322762618140'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:00:54 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (7.2ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( blogs.css )` to `config/initializers/assets.rb` and restart your server):
+     7: 
+     8:     <meta name="keywords" content="<%= @seo_keywords %>">
+     9: 
+    10:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/blog.html.erb:10:in `_app_views_layouts_blog_html_erb__3159035349027059828_70322748876820'
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 11:01:03 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/blog (39.8ms)
+Completed 200 OK in 333ms (Views: 285.2ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:01:29 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 69ms (Views: 54.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:01:29 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 96ms (Views: 90.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:03:36 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (37.8ms)
+Completed 200 OK in 325ms (Views: 292.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:03:36 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (6.0ms)
+Completed 200 OK in 89ms (Views: 77.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:03:44 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 97ms (Views: 62.3ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 11:03:44 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 80ms (Views: 70.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:04:24 +0530
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (33.4ms)
+Completed 200 OK in 312ms (Views: 267.8ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 11:04:25 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (7.6ms)
+Completed 200 OK in 73ms (Views: 64.9ms | ActiveRecord: 0.8ms)
+
+
