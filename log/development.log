@@ -6804,3 +6804,165 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 149ms (Views: 105.7ms | ActiveRecord: 23.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-25 09:56:40 +0530
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (46.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (41.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (174.1ms)
+Completed 200 OK in 568ms (Views: 423.1ms | ActiveRecord: 110.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:03:29 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 74ms (Views: 63.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:03:50 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:04:17 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (2.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 134ms (Views: 116.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:06:19 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 96ms (Views: 58.2ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 10:13:09 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 85ms (Views: 58.7ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2018-10-25 10:13:14 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (63.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:73
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 114ms (Views: 36.1ms | ActiveRecord: 63.0ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2018-10-25 10:37:22 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:76
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 108ms (Views: 60.8ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2018-10-25 10:42:08 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:76
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 107ms (Views: 101.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2018-10-25 10:42:10 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  ↳ app/controllers/blogs_controller.rb:76
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 46.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:42:14 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (1.0ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 69ms (Views: 47.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/about-me" for 127.0.0.1 at 2018-10-25 10:42:15 +0530
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-25 10:42:16 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:42:17 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (14.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (1.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 109ms (Views: 84.7ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-25 10:42:51 +0530
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.9ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 57ms (Views: 52.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 10:42:53 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 82ms (Views: 72.7ms | ActiveRecord: 0.9ms)
+
+

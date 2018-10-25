@@ -8,19 +8,25 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = 'Devcamp Blogs | Chathura Hettiarachchi'
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show; end
+  def show
+    @page_title = "#{@blog.title} | Chathura Hettiarachchi"
+  end
 
   # GET /blogs/new
   def new
     @blog = Blog.new
+    @page_title = 'New blog | Chathura Hettiarachchi'
   end
 
   # GET /blogs/1/edit
-  def edit; end
+  def edit
+    @page_title = "#{@blog.title} | Chathura Hettiarachchi"
+  end
 
   # POST /blogs
   # POST /blogs.json
