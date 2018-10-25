@@ -17,4 +17,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: 'source-greeting')
     end
   end
+
+  def copyright_generator
+    ChootaViewTool::Renderer.copyright 'Chathura Hettiarachchi', 'All rights reserved'
+  end
 end
