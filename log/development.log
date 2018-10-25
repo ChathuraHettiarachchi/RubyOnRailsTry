@@ -7820,3 +7820,139 @@ Processing by BlogsController#show as HTML
 Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:17:35 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (45.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered collection of blogs/_blog.html.erb [10 times] (8.3ms)
+  Rendered blogs/index.html.erb within layouts/blog (69.3ms)
+  [1m[36mUser Load (82.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendered shared/_nav.html.erb (1.2ms)
+Completed 200 OK in 232ms (Views: 92.8ms | ActiveRecord: 127.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-25 13:17:50 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (80.7ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 461ms (Views: 368.8ms | ActiveRecord: 73.6ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 13:21:22 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (38.1ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_portfolio with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views"
+  * "/Users/Choota/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views"
+):
+    4: 
+    5: <%= link_to "Create new item", new_portfolio_path %>
+    6: 
+    7: <%= render @portfolio_items%>
+  
+app/views/portfolios/index.html.erb:7:in `_app_views_portfolios_index_html_erb___2226432846440768630_70156165398040'
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 13:26:01 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  Rendered portfolios/index.html.erb within layouts/portfolio (0.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views/portfolios/index.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nd=( render @portfolio_items as portfolios);
+...                             ^~):
+  
+app/views/portfolios/index.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 13:26:26 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (14.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_portfolio with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views"
+  * "/Users/Choota/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views"
+):
+    4: 
+    5: <%= link_to "Create new item", new_portfolio_path %>
+    6: 
+    7: <%= render @portfolio_items %>
+  
+app/views/portfolios/index.html.erb:7:in `_app_views_portfolios_index_html_erb___2226432846440768630_70156167389360'
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 13:27:40 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (15.1ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_portfolio_item, application/_portfolio_item with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views"
+  * "/Users/Choota/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views"
+):
+    4: 
+    5: <%= link_to "Create new item", new_portfolio_path %>
+    6: 
+    7: <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+  
+app/views/portfolios/index.html.erb:7:in `_app_views_portfolios_index_html_erb___2226432846440768630_70156158504620'
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 13:28:11 +0530
+  [1m[35m (41.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered portfolios/index.html.erb within layouts/portfolio (38.8ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 10.9ms)
+
+
+  
+ActionView::Template::Error (Missing partial portfolios/_portfolio_item, application/_portfolio_item with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Choota/Documents/Chathura/Fidenz/Web Development/Ruby/RubyOnRailsTry/DevcampPortfolio/app/views"
+  * "/Users/Choota/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views"
+):
+    4: 
+    5: <%= link_to "Create new item", new_portfolio_path %>
+    6: 
+    7: <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+  
+app/views/portfolios/index.html.erb:7:in `_app_views_portfolios_index_html_erb__2528658290704167476_70276426833780'
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-25 13:29:18 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (5.3ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (15.7ms)
+  Rendered shared/_nav.html.erb (1.1ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+Completed 200 OK in 339ms (Views: 324.2ms | ActiveRecord: 11.4ms)
+
+
