@@ -17,14 +17,7 @@
   <body>
 
     <%= render "shared/blog_nav" %>
-
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">Choota's Blog</h1>
-        <p class="lead blog-description">You can used to show your blog posts via this website.</p>
-        <%= link_to 'Write a new blog', new_blog_path if logged_in?(:site_admin)%>
-      </div>
-    </div>
+    <%= render "shared/blog_masshead" %>
 
     <div class="container">
       <div class="row">
@@ -32,11 +25,8 @@
         <%= render "shared/blog_sidebar" %>
       </div>
 
-      <footer class="blog-footer">
-        <%= render "shared/application_footer" %>
-      </footer>
+      <%= render "shared/blog_footer" %>
       <%= source_helper('Blogs') %>
-
     </div>
   </body>
 </html>
