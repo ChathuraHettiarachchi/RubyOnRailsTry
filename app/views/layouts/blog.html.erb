@@ -20,14 +20,14 @@
 
     <div class="blog-header">
       <div class="container">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        <h1 class="blog-title">Choota's Blog</h1>
+        <p class="lead blog-description">You can used to show your blog posts via this website.</p>
+        <%= link_to 'Write a new blog', new_blog_path if logged_in?(:site_admin)%>
       </div>
     </div>
 
     <div class="container">
       <div class="row">
-        <%= login_helper %>
 
         <%= yield %>
 
@@ -94,21 +94,11 @@
             </ol>
           </div>
         </div>
-
-        <footer class="blog-footer">
-          <p>Blog template built for
-            <a href="https://getbootstrap.com">Bootstrap</a>
-            by
-            <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
-
-        <%= render "shared/nav", location: 'bottom' %>
-
-        <%= source_helper('Blogs') %>
       </div>
+
+      <%= render "shared/application_footer" %>
+      <%= source_helper('Blogs') %>
+
     </div>
   </body>
 </html>
