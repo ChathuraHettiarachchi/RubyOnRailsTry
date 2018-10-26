@@ -12390,3 +12390,123 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 138ms (Views: 128.6ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-26 14:42:20 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (2.8ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (13.0ms)
+  Rendered shared/_portfolio_nav.html.erb (1.5ms)
+  Rendered shared/_portfolio_mashead.html.erb (0.7ms)
+  Rendered shared/_application_footer.html.erb (2.3ms)
+  Rendered shared/_portfolio_footer.html.erb (10.4ms)
+Completed 200 OK in 316ms (Views: 304.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/portfolio/1" for 127.0.0.1 at 2018-10-26 14:42:22 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:64
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (44.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 1]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (79.4ms)
+  Rendered shared/_portfolio_nav.html.erb (0.8ms)
+  Rendered shared/_portfolio_mashead.html.erb (0.4ms)
+  Rendered shared/_application_footer.html.erb (0.7ms)
+  Rendered shared/_portfolio_footer.html.erb (3.8ms)
+Completed 200 OK in 231ms (Views: 124.3ms | ActiveRecord: 85.0ms)
+
+
+Started GET "/portfolio/10" for 127.0.0.1 at 2018-10-26 14:42:31 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPortfolio Load (20.0ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:64
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (1.8ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (22.3ms)
+  Rendered shared/_portfolio_nav.html.erb (0.8ms)
+  Rendered shared/_portfolio_mashead.html.erb (0.3ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (6.4ms)
+Completed 200 OK in 187ms (Views: 133.6ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/portfolio/10" for 127.0.0.1 at 2018-10-26 14:43:26 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:64
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (2.2ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (5.4ms)
+  Rendered shared/_portfolio_nav.html.erb (1.1ms)
+  Rendered shared/_portfolio_mashead.html.erb (0.8ms)
+  Rendered shared/_application_footer.html.erb (6.3ms)
+  Rendered shared/_portfolio_footer.html.erb (13.9ms)
+Completed 200 OK in 196ms (Views: 175.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-26 14:43:29 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (30.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (2.3ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (15.2ms)
+  Rendered shared/_portfolio_nav.html.erb (1.0ms)
+  Rendered shared/_portfolio_mashead.html.erb (0.7ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+  Rendered shared/_portfolio_footer.html.erb (7.7ms)
+Completed 200 OK in 154ms (Views: 112.9ms | ActiveRecord: 31.3ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-26 14:44:15 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (2.2ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (13.4ms)
+  Rendered shared/_portfolio_nav.html.erb (0.8ms)
+  Rendered shared/_portfolio_mashead.html.erb (0.4ms)
+  Rendered shared/_application_footer.html.erb (0.9ms)
+  Rendered shared/_portfolio_footer.html.erb (5.8ms)
+Completed 200 OK in 131ms (Views: 124.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolio/10" for 127.0.0.1 at 2018-10-26 14:44:17 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPortfolio Load (32.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:64
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:8
+  Rendering portfolios/show.html.erb within layouts/portfolio
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+  ↳ app/views/portfolios/show.html.erb:15
+  Rendered portfolios/show.html.erb within layouts/portfolio (3.8ms)
+  Rendered shared/_portfolio_nav.html.erb (1.4ms)
+  Rendered shared/_portfolio_mashead.html.erb (0.7ms)
+  Rendered shared/_application_footer.html.erb (0.4ms)
+  Rendered shared/_portfolio_footer.html.erb (4.0ms)
+Completed 200 OK in 148ms (Views: 99.7ms | ActiveRecord: 38.4ms)
+
+
