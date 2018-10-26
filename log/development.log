@@ -10195,3 +10195,101 @@ Processing by Devise::PasswordsController#new as HTML
 Completed 200 OK in 114ms (Views: 109.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/about-me" for 127.0.0.1 at 2018-10-26 10:41:17 +0530
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.9ms)
+  Rendered shared/_application_nav.html.erb (41.5ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 233ms (Views: 190.5ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-26 10:41:18 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (7.7ms)
+  Rendered shared/_application_nav.html.erb (1.1ms)
+  Rendered shared/_application_footer.html.erb (0.4ms)
+Completed 200 OK in 128ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:41:21 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (46.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (16.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (82.6ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 174ms (Views: 104.1ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:41:21 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (7.3ms)
+  Rendered blogs/index.html.erb within layouts/blog (22.8ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 125ms (Views: 120.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-26 10:41:23 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (2.0ms)
+  Rendered shared/_application_nav.html.erb (1.6ms)
+  Rendered shared/_application_footer.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 133.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-26 10:41:23 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.9ms)
+  Rendered shared/_application_nav.html.erb (2.1ms)
+  Rendered shared/_application_footer.html.erb (1.9ms)
+Completed 200 OK in 163ms (Views: 159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-26 10:41:25 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (93.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (11.2ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (127.8ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 282ms (Views: 153.5ms | ActiveRecord: 101.0ms)
+
+
+Started GET "/portfolios" for 127.0.0.1 at 2018-10-26 10:41:26 +0530
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/portfolio
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/views/portfolios/index.html.erb:7
+  Rendered collection of portfolios/_portfolio_item.html.erb [10 times] (23.0ms)
+  Rendered portfolios/index.html.erb within layouts/portfolio (41.8ms)
+  Rendered shared/_nav.html.erb (0.7ms)
+Completed 200 OK in 173ms (Views: 153.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-26 10:41:27 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (1.1ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 136ms (Views: 127.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-26 10:41:27 +0530
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.2ms)
+  Rendered shared/_application_footer.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+
