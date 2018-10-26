@@ -10293,3 +10293,69 @@ Processing by PagesController#contact as HTML
 Completed 200 OK in 128ms (Views: 123.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:46:24 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (7.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (35.8ms)
+  Rendered blogs/index.html.erb within layouts/blog (121.3ms)
+  Rendered shared/_nav.html.erb (1.2ms)
+Completed 200 OK in 321ms (Views: 206.0ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:46:25 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (7.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.1ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 90.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:48:07 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:16
+  Rendered collection of blogs/_blog.html.erb [10 times] (14.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (23.3ms)
+  Rendered shared/_nav.html.erb (0.9ms)
+Completed 200 OK in 167ms (Views: 159.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:51:15 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:106
+  Rendered collection of blogs/_blog.html.erb [10 times] (31.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (43.5ms)
+  Rendered shared/_nav.html.erb (1.3ms)
+Completed 200 OK in 184ms (Views: 173.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:51:59 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:106
+  Rendered collection of blogs/_blog.html.erb [10 times] (15.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (20.8ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+Completed 200 OK in 163ms (Views: 154.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-10-26 10:52:48 +0530
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:106
+  Rendered collection of blogs/_blog.html.erb [10 times] (13.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.2ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 3202ms (Views: 3197.0ms | ActiveRecord: 0.5ms)
+
+
